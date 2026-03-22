@@ -1,4 +1,4 @@
-# ⚡ Zyren Launcher
+# ⚡ Orvian Launcher
 
 Launcher custom para Minecraft con Discord + auto-updater.
 
@@ -15,7 +15,7 @@ Vercel (backend)
   └── /api/verify-discord     → verifica que el usuario está en tu servidor
 
 Tu amigo
-  └── Descarga ZyrenLauncher-Setup.exe desde GitHub Releases
+  └── Descarga OrvianLauncher-Setup.exe desde GitHub Releases
       └── Lo instala → se conecta a Vercel → descarga mods → juega
 ```
 
