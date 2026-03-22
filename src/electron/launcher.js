@@ -12,7 +12,7 @@ const MODS_DIR = path.join(GAME_DIR, "mods");
 
 // URL de tu servidor con el JSON del modpack (lo configuras tú)
 const MODPACK_MANIFEST_URL =
-  process.env.MODPACK_URL || "https://tu-servidor.com/modpack/manifest.json";
+  process.env.MODPACK_URL || "https://orvian-launcher.vercel.app/";
 
 // ─── Helpers ───────────────────────────────────────────────────
 function ensureDirs() {
