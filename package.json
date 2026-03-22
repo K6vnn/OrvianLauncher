@@ -1,0 +1,59 @@
+{
+  "name": "zyren-launcher",
+  "version": "1.0.0",
+  "description": "Custom Minecraft Launcher",
+  "main": "main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "react-start": "cross-env BROWSER=none react-scripts start",
+    "react-build": "react-scripts build",
+    "electron-build": "electron-builder --win --publish always",
+    "build": "npm run react-build && npm run electron-build"
+  },
+  "build": {
+    "appId": "com.zyren.launcher",
+    "productName": "Zyren Launcher",
+    "files": ["build/**/*", "main.js", "src/electron/**/*"],
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Zyren Launcher"
+    },
+    "publish": {
+      "provider": "github",
+      "releaseType": "release"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "electron-updater": "^6.1.0",
+    "discord-rpc": "^4.0.1",
+    "electron-store": "^8.1.0",
+    "msmc": "^4.1.0",
+    "minecraft-launcher-core": "^3.17.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "wait-on": "^7.2.0"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead"],
+    "development": ["last 1 electron version"]
+  }
+}
