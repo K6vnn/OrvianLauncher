@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "mcVersion": "1.20.1",
+  "forgeVersion": "47.2.0",
+  "changelog": "Primera versión del modpack",
+  "serverIp": "tu.servidor.net",
+  "mods": [
+    {
+      "name": "jei-1.20.1-forge-15.2.0.27.jar",
+      "url": "https://mediafilez.forgecdn.net/files/xxxx/jei.jar",
+      "sha1": "abc123def456"
+    },
+    {
+      "name": "journeymap-1.20.1-5.9.18-forge.jar",
+      "url": "https://mediafilez.forgecdn.net/files/xxxx/journeymap.jar",
+      "sha1": "def456abc123"
+    }
+  ]
+}
